@@ -2,7 +2,7 @@ class MarkupTemplate {
 
     constructor(partialHead, bodyContent) {
         this.partialHead = partialHead;
-        this.bodyContent = bodyContent
+        this.bodyContent = bodyContent;
     }
 
     get markup() {

@@ -7,7 +7,7 @@ function build(callback=err=>err&&console.log(err)) {
         path.resolve(__dirname, './index.html'), 
         (new MarkupTemplate(
             `
-                <title>test page<title>
+                <title>test page</title>
                 <style>
                     .box {
                         width: 100px;
