@@ -1,0 +1,11 @@
+{
+  "name": "html-js-idea",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/gw-ascent/2step-build-hybrid-static.git",
+  "author": "Giwan Lim <gw.lim@ascentnet.co.jp>",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  }
+}
