@@ -13,9 +13,7 @@ const buildMarkUp = (cb) => {
     };
 
     return src('src/**/*.html.js')
-        .pipe(exec(file => {
-            return `node ${file.path.replace(/.js$/i, '')}`
-        }, options))
+        .pipe(exec(file => `node ${file.path}`, options))
         .pipe(exec.reporter(reportOptions))
 }
 
