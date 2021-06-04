@@ -27,4 +27,4 @@ function build(callback=err=>err&&console.log(err)) {
     );
 }
 
-exports.build = build;
+build();
