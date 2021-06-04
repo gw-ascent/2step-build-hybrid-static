@@ -1,23 +1,20 @@
 const { src, series } = require("gulp");
 const exec = require('gulp-exec');
-const { build: buildHTML } = require('./src/page/index.mkup');
 
 const buildMarkUp = (cb) => {
-    var options = {
+    let options = {
         continueOnError: false, // default = false, true means don't emit error event
         pipeStdout: false, // default = false, true means stdout is written to file.contents
     };
-    var reportOptions = {
+    let reportOptions = {
         err: true, // default = true, false means don't write err
         stderr: true, // default = true, false means don't write stderr
         stdout: true // default = true, false means don't write stdout
     };
 
-    return src('src/**/*.mkup.js')
+    return src('src/**/*.html.js')
         .pipe(exec(file => {
-            console.log(file.path);
-            console.log(file.path.replace('.js', ''));
-            return `node ${file.path.replace('.js', '')}`
+            return `node ${file.path.replace(/.js$/i, '')}`
         }, options))
         .pipe(exec.reporter(reportOptions))
 }
