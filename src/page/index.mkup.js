@@ -3,7 +3,7 @@ const path = require('path');
 const { MarkupTemplate } = require (path.resolve(__dirname, '..', 'component', 'MarkupTemplate.js'));
 
 function build(callback=err=>err&&console.log(err)) {
-    fs.writeFile(
+    return fs.writeFile(
         path.resolve(__dirname, './index.html'), 
         (new MarkupTemplate(
             `
@@ -27,4 +27,4 @@ function build(callback=err=>err&&console.log(err)) {
     );
 }
 
-build();
+exports.build = build;
